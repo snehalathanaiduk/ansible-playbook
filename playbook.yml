@@ -1,0 +1,8 @@
+- name: First Play - Manage Web Servers
+  hosts: web
+  become: yes
+  tasks:
+    - name: Install httpd web server
+      dnf:
+        name: httpd
+        state: present
